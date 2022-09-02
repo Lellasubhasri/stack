@@ -1,0 +1,28 @@
+---
+- hosts: default
+  gather_facts: yes
+
+  pre_tasks:
+    - name: update apt cache if needed
+      become: yes
+      apt:
+        update_cache=yes
+        cache_valid_time=3600
+  tasks:
+    - name: Install Java Runtime Environment 
+      apt:
+        name: default-jre
+        state: present 
+- name: Download Metricbeat Package
+      get_url:
+        url: https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-8.1.3-amd64.deb
+        dest: /tmp
+    
+    - name: Install Metricbeat Deb Package
+      apt:
+        deb: /tmp/metricbeat-8.1.3-amd64.deb
+
+    - name: Start Metricbeat Service
+      service:
+        name: metricbeat
+        state: started

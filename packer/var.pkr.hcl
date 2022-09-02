@@ -1,0 +1,5 @@
+// instance_type     = "t3.small"
+// region            = "ap-southeast-2"
+// vpc_id            = "vpc-032d4d54903515a30"
+// subnet_id         = "subnet-0b3d9b17de6a835d6"
+// security_group_id = "sg-0efaaf5c91687c517"

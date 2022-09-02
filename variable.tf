@@ -28,7 +28,7 @@ variable "cidr_private1" {
 # variable "ami_name" {
 #   description = " This is the owner name"
 #   type = string
-  
+
 # }
 
 
@@ -38,4 +38,25 @@ variable "cidr_private2" {
 
 variable "cidr_private3" {
   description = "this is for CIDR private3 subnet"
+}
+
+variable "elasticsearch_ami_id" {
+  description = "This is my ami id for ElasticSearch"
+  type        = string
+}
+
+
+variable "logstash_ami_id" {
+  description = "This is my ami id for Logstash"
+  type        = string
+}
+
+variable "kibana_ami_id" {
+  description = "This is my ami id for Kibana"
+  type        = string
+}
+
+variable "filebeat_ami_id" {
+  description = "This is my ami id for Kibana"
+  type        = string
 }
